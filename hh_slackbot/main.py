@@ -29,7 +29,7 @@ def main():
             if (img == img[0, 0]).all() and tuple(img[0, 0]) in PLAYERS:
                 new_player = PLAYERS[tuple(img[0, 0])]
                 if new_player != current_player:
-                    webhook.send(text=f"It's {new_player}'s turn!")
+                    webhook.send(text=f"It's *{new_player}*'s turn!")
                     current_player = new_player
                     print(new_player)
 
