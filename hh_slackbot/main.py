@@ -27,7 +27,7 @@ def main():
             img = np.array(sct.grab(monitor))[:, :, :3]
 
             if (img == img[0, 0]).all() and tuple(img[0, 0]) in PLAYERS:
-                new_player = PLAYERS[(img[0, 0, 0], img[0, 0, 1], img[0, 0, 2])]
+                new_player = PLAYERS[tuple(img[0, 0])]
                 if new_player != current_player:
                     webhook.send(text=f"It's {new_player}'s turn!")
                     current_player = new_player
