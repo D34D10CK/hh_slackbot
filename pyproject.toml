@@ -1,0 +1,17 @@
+[project]
+name = "hh_slackbot"
+version = "1.0"
+description = "Hero's Hour Slack Bot"
+authors = []
+dependencies = [
+    "mss>=9.0.1",
+    "numpy>=1.25.2",
+    "slack-sdk>=3.21.3",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "WTFPL" }
+
+[tool.pdm.dev-dependencies]
+dev = ["black>=23.7.0", "ruff>=0.0.287"]
