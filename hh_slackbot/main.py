@@ -9,11 +9,11 @@ from slack_sdk.webhook import WebhookClient
 load_dotenv()
 
 PLAYERS = {
-    (64, 103, 73): "Verdant Delirium",
-    (112, 48, 48): "Indigo Decay",
-    (112, 48, 112): "Rose Arcane",
-    (48, 112, 112): "Ochre Wild",
-    (48, 48, 112): "Crimson Earthen",
+    (64, 103, 73): "Verdant",
+    (112, 48, 48): "Indigo",
+    (112, 48, 112): "Rose",
+    (48, 112, 112): "Ochre",
+    (48, 48, 112): "Crimson",
 }
 
 
@@ -29,7 +29,7 @@ def main():
             if (img == img[0, 0]).all() and tuple(img[0, 0]) in PLAYERS:
                 new_player = PLAYERS[tuple(img[0, 0])]
                 if new_player != current_player:
-                    webhook.send(text=f"It's *{new_player}*'s turn!")
+                    webhook.send(text=f"It's the *{new_player}* player's turn!")
                     current_player = new_player
                     print(new_player)
 
